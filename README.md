@@ -14,3 +14,12 @@ The prediction model is based on the long short-term memory (LSTM) neural networ
 ## System Architecture
 
 ![](https://github.com/krypt-14/Jun/blob/master/system_architecture.JPG)
+
+### Step 1 - Preparing and Extrating Data
+In summary this data is extract through City of Melbourne on-street parking dataset through connecting to their API, and was preprocess on Google CLoud Services. 
+
+### Step 2 - Preparing the Model 
+The subfolder "Model" will test out the accuracy score of the LSTM model to present the prediction on the dataset given through preprocessing
+
+### Step 3 - Preparing the UI Interface
+The user interface is built around flask and present the visualization of the result from the LSTM Model
