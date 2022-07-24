@@ -11,15 +11,9 @@ The project revolves around smart parking availability system based on the data 
 
 The prediction model is based on the long short-term memory (LSTM) neural networks and has been implemented on Melbourne CBD on-street parking dataset that has been preprocessed and aggregated on Google's Big Query. We achieved a test Mean Absolute Error (MAE) of 0.1634 for the year of 2019, with a two-layer stacked LSTM on a 24 hour multi step output. The prediction results are filtered to display the user preferences captured via a user interface (UI) that was built on Flask and Mapbox. We present an end to end model built on cloud tools as the building blocks for future work in a wide array of applications. This includes creating insights and patterns based on the occupancy and restriction violation data of the parking lots, helping the city council in making data driven decisions and better planning for the future.
 
-## System Architecture
+## Model Architecture
+The prediction model is based off a 2 layer stacked LSTM as shown below. It takes the aggregated [road segment data](https://github.com/krypt-14/Jun/blob/master/3%20-%20User%20Interface/data/parking_agg_pivot.zip) as input and produces a `my_model.h5` file and `scaler.pkl` which are fed into the UI for prediction.
 
-![](https://github.com/krypt-14/Jun/blob/master/system_architecture.JPG)
+The `model.ipynb` file is best run on a Google Colab instance with a GPU runtime (see notebook instructions for more details).
 
-#### Step 1 - Preparing and Extrating Data
-In summary this data is extract through City of Melbourne on-street parking dataset through connecting to their API, and was preprocess on Google CLoud Services. 
-
-#### Step 2 - Preparing the Model 
-The subfolder "Model" will test out the accuracy score of the LSTM model to present the prediction on the dataset given through preprocessing
-
-#### Step 3 - Preparing the UI Interface
-The user interface is built around flask and present the visualization of the result from the LSTM Model
+To begin training, run the `model.ipynb` file and follow the documentation as a guide.
