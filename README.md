@@ -14,8 +14,8 @@ The prediction model is based on the long short-term memory (LSTM) neural networ
 ## Model Architecture
 The prediction model is based off a 2 layer stacked LSTM as shown below. It takes the aggregated [road segment data](https://github.com/krypt-14/Forecasting-Parking-Availability/blob/2966031d9927cf7bb0f76efe4bd9106e711900b4/parking_agg_pivot.zip) as input and produces a `my_model.h5` file and `scaler.pkl` which are fed into the UI for prediction.
 
-
-
 The `model.ipynb` file is best run on a Google Colab instance with a GPU runtime (see notebook instructions for more details).
 
 To begin training, run the `model.ipynb` file and follow the documentation as a guide.
+
+![Model Architexture](model_architecture.png)
