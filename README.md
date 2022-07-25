@@ -19,3 +19,31 @@ The `model.ipynb` file is best run on a Google Colab instance with a GPU runtime
 To begin training, run the `model.ipynb` file and follow the documentation as a guide.
 
 ![Model Architexture](model_architecture.png)
+
+## Tensorboard Hyperparameter Results
+
+To view the hyperparemeter results, start by initializing the tensorboard in Google Colab.
+
+```python
+# Load the TensorBoard notebook extension
+%load_ext tensorboard
+```
+
+Then load the appropriate log files using the path.
+
+
+E.g.
+```python
+%tensorboard --logdir /tensorboard/logs/folder_name
+```
+
+For more on Hyperparameter tuning on Tensorboard, see here https://www.tensorflow.org/tensorboard/hyperparameter_tuning_with_hparams.
+
+## Experiments
+The Model iteration experiments as explained in the 4 - Documentation Report are added in the `experiments/` folder for completeness.
+
+
+## Retraining the model
+To retrain the model with a more up to date dataset, either load the latest data file csv/zip into the notebook and map it to `DATA_PATH`, or using BigQuery should get the latest clean data from the instance.
+
+When using a new dataset, it is important to keep in mind the dimensionality of the trained model. The model has been trained on a set number of roadsegments as features (279 for 2017-2019 data), and running a new dataset will likely have a different number of columns. Therefore the model must be retrained in its entirety to account for this dimension change. Similar goes for adding external data as columns (follow the instructions in the notebook **Parameters** section on how to implement this).
