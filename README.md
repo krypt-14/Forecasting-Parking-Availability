@@ -44,6 +44,6 @@ The Model iteration experiments as explained in the 4 - Documentation Report are
 
 
 ## Retraining the model
-To retrain the model with a more up to date dataset, either load the latest data file csv/zip into the notebook and map it to `DATA_PATH`, or using BigQuery should get the latest clean data from the instance.
+To retrain the model with a more up to date dataset, either load the latest data file csv/zip into the notebook and map it to `DATA_PATH` should get the latest clean data from the instance.
 
 When using a new dataset, it is important to keep in mind the dimensionality of the trained model. The model has been trained on a set number of roadsegments as features (279 for 2017-2019 data), and running a new dataset will likely have a different number of columns. Therefore the model must be retrained in its entirety to account for this dimension change. Similar goes for adding external data as columns (follow the instructions in the notebook **Parameters** section on how to implement this).
